@@ -13,6 +13,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -32,7 +33,7 @@ def butterknifeVersion = '10.2.3' // done
 def supportVersion = '28.0.0' // done but in code was 29
 def retrofitVersion = '2.9.0' // done
 def glideVersion = '4.12.0' // done
-def rxJavaVersion = '2.2.21' // done
+def rxJavaVersion = '2.1.1' // done
 def daggerVersion = '2.40.5' // done
 def mockitoVersion = '4.2.0' // done
 
@@ -41,6 +42,8 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+
+    implementation 'androidx.multidex:multidex:2.0.1'  //with androidx libraries
 
     implementation "com.android.support:design:$supportVersion"
 
@@ -52,6 +55,10 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+
+
+//    implementation "io.reactivex.rxjava3:rxandroid:3.0.0"
+//    implementation "io.reactivex.rxjava3:rxjava:3.0.0"
 
     implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
     implementation "io.reactivex.rxjava2:rxandroid:$rxJavaVersion"
