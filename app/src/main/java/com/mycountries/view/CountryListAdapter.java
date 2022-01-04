@@ -67,7 +67,7 @@ public class CountryListAdapter extends RecyclerView.Adapter<CountryListAdapter.
         void bind(CountryModel country) {
             countryName.setText(country.getCountryName());
             countryCapital.setText(country.getCountryCapital());
-         //   Util.loadImage(countryImage, country.getFlag(), Util.getProgressDrawable(countryImage.getContext()));
+           Util.loadImage(countryImage, country.getCountryFlag(), Util.getCircularProgressDrawable(countryImage.getContext()));
         }
     }
 }
